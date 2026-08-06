@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
 # Instalar dependencias del SO
 RUN apt-get update && apt-get install -y \
@@ -42,4 +42,4 @@ RUN mkdir -p /var/log/supervisor
 EXPOSE 8000
 
 # Comando por defecto
-CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

@@ -11,6 +11,7 @@ services:
     environment:
       - APP_ENV=development
       - APP_DEBUG=true
+      - DB_CONNECTION=mysql
       - APP_KEY=base64:sKXnq7T4QZMEp0Gt8X9r5u2z0d7KvLnX2C5m1j9p3W0=
       - DB_HOST=mysql
       - DB_PORT=3306
